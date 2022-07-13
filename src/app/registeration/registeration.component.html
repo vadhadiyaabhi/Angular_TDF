@@ -16,14 +16,14 @@
     <div class="d-flex justify-content-between my-2">
         <mat-form-field class="example-half-width">
             <mat-label>FirstName</mat-label>
-            <input type="text" name="firstname" pattern="^[a-zA-Z][a-zA-Z\\s]+$"#fname="ngModel" [(ngModel)]="userModel.firstname" matInput placeholder="First Name" required class="">
+            <input type="text" name="firstname" pattern="^[a-zA-Z][a-zA-Z\\s]+$"  #fname="ngModel" [(ngModel)]="userModel.firstname" matInput placeholder="First Name" required class="">
               <mat-error *ngIf="fname.errors &&  fname.errors['pattern']" class="mb-2">
                 Please enter a valid input field
               </mat-error>
               <mat-error *ngIf="fname.errors &&  fname.errors['required']">
                 FirstName is <strong>required</strong>
               </mat-error>
-        </mat-form-field>
+          </mat-form-field>
         <mat-form-field class="example-half-width">
             <mat-label>LastName</mat-label>
             <input type="text" name="lastname" pattern="^[a-zA-Z ]*$" #lname="ngModel" [(ngModel)]="userModel.lastname" matInput placeholder="Last Name" required>
